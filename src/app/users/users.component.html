@@ -1,0 +1,23 @@
+<div class="container">
+
+    <table class="table is-bordered is-fullwidth is-hoverable" *ngIf="users.length; else noUsers ">
+        <tr class="has-background-primary">
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td ngrHighlighter>{{user.email}}</td>
+        </tr>
+    </table>
+
+    <ng-template #noUsers>
+        <span class="tag is-warning is-align-content-center">No users are available !</span>
+    </ng-template>
+
+</div>
+
+
+
